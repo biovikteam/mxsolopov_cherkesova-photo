@@ -1,0 +1,27 @@
+@import 'vars.scss';
+
+// Поключение шрифтов; начертания шрифтов задаются в vars.scss
+@mixin createFontFace($font-family, $fonts) {
+
+    @each $font-item,
+    $weight in $fonts {
+        @font-face {
+            font-family: $font-family;
+            src:
+                url('../fonts/'+ $font-item + '.woff') format('woff'),
+                url('../fonts/'+ $font-item + '.woff2') format('woff2');
+            font-weight: $weight;
+            font-display: swap;
+        }
+    }
+}
+
+// Сброс стилей кнопки
+@mixin button-reset {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}

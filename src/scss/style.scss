@@ -1,0 +1,28 @@
+@import './libs/normalize.css';
+@import './libs/nullcss.css';
+@import './utils/vars.scss';
+@import './utils/mixins.scss';
+@import './includes/animations.scss';
+
+
+@include createFontFace($font-family, $fonts);
+
+body {
+    background-color: $bg;
+    font-family: $font-family;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1023.98px) {
+        max-width: 94%;
+    }
+
+    @media screen and (max-width: 479.98px) {
+        max-width: 92%;
+    }
+}
+
+@import './includes/hero.scss';

@@ -1,0 +1,10 @@
+extends ../layout/start-tmpl
+
+block links
+    link(rel='stylesheet', href=cssPath+'style.bundle.css')
+
+block content
+   include ../includes/hero.pug
+
+block scripts
+    script(src=jsPath+'bundle.js')
